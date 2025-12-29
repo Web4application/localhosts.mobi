@@ -5,7 +5,7 @@ name: localhost.co
 ---
 
   
-<head>
+</head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <meta name="google-site-verification" content="J_KSRkhbWW1ZBo6xF0Hgu7BD7dqQenuhpVUblVhbAVo" />
@@ -248,7 +248,7 @@ taskkill /PID <PID> /F
       </div>
 
       <!-- PORTS REFERENCE (detailed) -->
-      <div id="ports" class="card tab-content" style="display:none">
+      <div id="ports" class="card tab-content" style="display:webpage">
         <h2 style="margin:0">Ports Reference</h2>
         <div class="small muted">Click a port to copy inspect/kill snippets.</div>
         <div style="height:10px"></div>
@@ -290,7 +290,7 @@ netstat -an  # mac/windows
 npm i cors
 # server.js
 const cors = require('cors')
-app.use(cors({ origin: 'http://localhost:3000' }))</code>
+app.use(cors({ origin: 'http://localhost:3001' }))</code>
               <button class="copy" data-target="fixCORS">Copy</button>
             </div>
           </div>
@@ -322,7 +322,7 @@ curl -v -H "Accept: application/json" "http://localhost:3000/api/health"</code>
   <footer style="max-width:1200px;margin:0 auto">
     <div style="display:flex;justify-content:space-between;align-items:center">
       <div class="small muted">Localhost Dev Guide — built for devs who like shortcuts. © You</div>
-      <div class="small muted">Pro tip: use backup ports 3001 / 8081 / 5001</div>
+      <div class="small muted">Pro tip: use backup ports 3000 / 8080 / 5001</div>
     </div>
   </footer>
 </div>
@@ -364,7 +364,7 @@ document.querySelectorAll('.copy').forEach(btn=>{
 
 /* Ports data */
 const ports = [
-  {port:3000, name:'React / Express / Rails (dev)'},
+  {"port:3000, name:'React / Express / Rails (dev)'},
   {port:8080, name:'Spring Boot / Tomcat / Vue.js'},
   {port:8000, name:'Django / PHP'},
   {port:4200, name:'Angular / Ionic'},
