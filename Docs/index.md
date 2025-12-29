@@ -1,12 +1,17 @@
-<!doctype html>
-<html lang="en">
+---
+tittle: localhost
+layouts: #schema.org/webpage
+name: localhost.co
+---
+
+  
 <head>
-<meta name="google-site-verification" content="J_KSRkhbWW1ZBo6xF0Hgu7BD7dqQenuhpVUblVhbAVo" />
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Localhost Dev Guide — All Modes</title>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-<style>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="google-site-verification" content="J_KSRkhbWW1ZBo6xF0Hgu7BD7dqQenuhpVUblVhbAVo" />
+
+  <title>Localhost Dev Guide — All Modes</title>
+<link rel="icon" href="data:;base64,iVBORw0KGgo="><style>
   :root{
     --bg:#0b1220; --card:#071428; --muted:#98a6b3; --accent:#7dd3fc; --glass: rgba(255,255,255,0.03);
     --light-bg:#f6fbff; --light-card:#ffffff; --light-text:#082135;
@@ -24,29 +29,23 @@
          display:flex;align-items:center;justify-content:center;font-weight:800;color:#021028;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
   h1{font-size:18px;margin:0}
   p.lead{margin:0;color:var(--muted);font-size:13px}
-
   .toolbar{display:flex;gap:8px;align-items:center;margin-left:auto}
   .btn{padding:8px 12px;border-radius:10px;border:0;cursor:pointer;background:linear-gradient(90deg,#034e6a,#0f78a1);color:white;font-weight:600}
   .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 10px;border-radius:10px;cursor:pointer}
   .small{font-size:13px;color:var(--muted)}
-
   main{display:grid;grid-template-columns: 260px 1fr;gap:14px}
   nav{background:var(--card);border-radius:12px;padding:12px;box-shadow:0 10px 40px rgba(2,6,23,0.6)}
   nav input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit}
-
   .tabs{margin-top:12px;display:flex;flex-direction:column;gap:8px}
   .tab-btn{padding:10px;border-radius:8px;border:0;background:transparent;color:var(--muted);text-align:left;cursor:pointer}
   .tab-btn.active{color:var(--accent);background:linear-gradient(90deg, rgba(125,211,252,0.06), transparent);font-weight:600}
-
   .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(2,6,23,0.6);overflow:auto}
   .card.minimal{padding:22px}
-  .muted{color:var(--muted)}
-  .code{background:#00111a;padding:12px;border-radius:8px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,"Roboto Mono",monospace;font-size:13px;color:#bfeefe;white-space:pre-wrap;position:relative}
+  .muted{color:var(--muted)}  .code{background:#00111a;padding:12px;border-radius:8px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,"Roboto Mono",monospace;font-size:13px;color:#bfeefe;white-space:pre-wrap;position:relative}
   .copy{position:absolute;right:10px;top:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px;border-radius:6px;cursor:pointer;color:var(--muted)}
   table{width:100%;border-collapse:collapse;margin-top:10px}
   td,th{padding:8px;border-bottom:1px dashed rgba(255,255,255,0.03);text-align:left}
   th{color:var(--muted);font-size:13px}
-
   /* Console style */
   .console{
     background:#000; color:#9ff7ff; border-radius:10px; padding:12px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
@@ -54,13 +53,11 @@
   }
   .console .line{opacity:0;transform:translateY(6px);animation:appear 320ms forwards}
   @keyframes appear{to{opacity:1;transform:none}}
-
   /* responsive */
   @media (max-width:1000px){
     main{grid-template-columns: 1fr; padding-bottom:20px}
     nav{order:2}
   }
-
   /* light mode */
   .light body, .light { color:var(--light-text); background:var(--light-bg) }
   .light .card, .light nav { background: var(--light-card); box-shadow:none; color:var(--light-text) }
@@ -74,6 +71,7 @@
   .port-left{display:flex;gap:12px;align-items:center}
   .port-num{font-weight:700;color:var(--accent);min-width:60px}
   .flex-gap{display:flex;gap:8px;align-items:center}
+
 </style>
 </head>
 <body>
@@ -82,10 +80,11 @@
     <div class="logo">LH</div>
     <div>
       <h1>Localhost Dev Guide</h1>
-      <p class="lead">Minimal, Interactive, and Console — all modes in one file. Copy, search, run, repeat.</p>
+      <p class="lead">Minimal, Interactive, and Console — all modes in one file. Copy, search, run, repeat.
+  </p>
     </div>
-
-    <div class="toolbar" role="toolbar" aria-label="actions">
+    
+  <div class="toolbar" role="toolbar" aria-label="actions">
       <button class="ghost" id="themeToggle" title="Toggle light / dark">Toggle Theme</button>
       <button class="btn" id="downloadBtn">Download HTML</button>
     </div>
@@ -104,8 +103,7 @@
         <button class="tab-btn" data-tab="http" role="tab">HTTP Snapshot</button>
       </div>
     </nav>
-
-    <!-- CONTENT AREA -->
+   <!-- CONTENT AREA -->
     <section style="display:flex;flex-direction:column;gap:12px">
       <!-- INTERACTIVE -->
       <div id="interactive" class="card tab-content" style="">
@@ -119,13 +117,13 @@
             <button class="btn" onclick="filterPorts()">Search</button>
           </div>
         </div>
-
-        <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+        
+  <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
           <div style="flex:1;min-width:280px">
             <div class="card" style="padding:12px">
               <h4 style="margin:6px 0">Quick Commands</h4>
               <div class="code" id="cmd1">
-lsof -i :PORT            # (Mac/Linux) find what's using a port
+                lsof -i :PORT            # (Mac/Linux) find what's using a port
 netstat -ano | findstr :PORT # (Windows) find what's using a port
 kill -9 PID                  # (Mac/Linux) kill a process by PID
 taskkill /PID PID /F         # (Windows) kill a process by PID
@@ -135,9 +133,7 @@ python -m http.server PORT   # start a simple HTTP server (python)
 npx http-server -p PORT      # start simple static server (node)
               <button class="copy" data-target="cmd1">Copy</button></div>
             </div>
-
             <div style="height:12px"></div>
-
             <div class="card" style="padding:12px">
               <h4 style="margin:6px 0">Actions</h4>
               <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -150,16 +146,13 @@ npx http-server -p PORT      # start simple static server (node)
               <div class="small muted">Click to copy commands to clipboard. Replace &lt;PID&gt; when required.</div>
             </div>
           </div>
-
           <div style="flex:2;min-width:320px">
             <div class="card" style="padding:12px">
               <h4 style="margin:6px 0">Ports</h4>
               <div id="portsList" style="display:grid;gap:8px"></div>
             </div>
-
             <div style="height:12px"></div>
-
-            <div class="card" style="padding:12px">
+          <div class="card" style="padding:12px">
               <h4 style="margin:6px 0">Framework Snippets</h4>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
                 <div class="code" id="react">
@@ -171,7 +164,9 @@ npm run dev # opens on 5173 by default
                 <button class="copy" data-target="react">Copy</button></div>
 
                 <div class="code" id="flask">
-# Flask
+>
+>
+Flask
 export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run --port=5000
@@ -191,13 +186,12 @@ java -jar app.jar --server.port=8081
           </div>
         </div>
       </div>
-
       <!-- MINIMAL -->
       <div id="minimal" class="card tab-content" style="display:none">
         <h2 style="margin:0">Minimal Docs — Quick Reference</h2>
         <p class="muted small">Printable, copy-friendly reference. Use this when you want the facts fast.</p>
 
-        <h3>Quick Commands</h3>
+  <h3>Quick Commands</h3>
         <pre style="background:transparent;padding:10px;border-radius:8px;color:inherit;font-family:inherit">
 lsof -i :PORT            # Mac/Linux find what's using a port
 netstat -ano | findstr :PORT # Windows find what's using a port
@@ -209,7 +203,7 @@ python -m http.server PORT
 npx http-server -p PORT
         </pre>
 
-        <h3>Common Ports</h3>
+   <h3>Common Ports</h3>
         <table>
           <thead><tr><th>Service</th><th>Port</th></tr></thead>
           <tbody>
