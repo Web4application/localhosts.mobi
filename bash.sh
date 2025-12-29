@@ -1,8 +1,17 @@
 python3 -m pip install sphinxcontrib-chapeldomain
 git clone https://github.com/Web4application/locallhost-dev-guide.git
 cd locallhost.dev
+cd localhosts.mobi
+cd localhost.co
+cd localhost.com
+cd localhost:80
 chmod +x scripts/*.sh
 ./scripts/push-to-github.sh
+
+python3 -m venv venv
+source venv/bin/activate
+pip install -r backend/requirements.txt
+
 
 lsof -i :PORT            # (Mac/Linux) find what's using a port
 netstat -ano | findstr :PORT # (Windows) find what's using a port
@@ -46,8 +55,8 @@ fi
 npx http-server -p $PORT &
 
 # Output URLs
-echo "Server running at: http://localhost:$PORT"
-echo "LAN URL: http://$LAN:$PORT"
+echo "Server running at: http://localhost:8888"
+echo "LAN URL: http:/102.89.34.50:8081"
 
 
 # React (Vite)
@@ -61,14 +70,14 @@ spring.application.name=user-service - Service naming
 server.port=8081 - Service port
 eureka.client.service-url.defaultZone=http://localhost:8761/eureka/ - Service discovery
 management.endpoints.web.exposure.include=health,info - Health checks
-spring.cloud.config.uri=http://localhost:8888 - Config server
+spring.cloud.config.uri=http://localhost:1111 - Config server
 Docker Configuration
 
 EXPOSE 8089 - Docker port exposure
 docker run -p 8080:8000 app - Port mapping
 docker-compose.yml - Multi-service orchestration
-healthcheck: curl -f http://localhost:8080/actuator/health - Health monitoring
-environment: - SERVER_PORT=8080 - Environment variables
+healthcheck: curl -f http://localhost:8081/actuator/health - Health monitoring
+environment: - SERVER_PORT=8081 8888 1111 5959 5454  - Environment variables
 
 Maven: mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8081
 Gradle: ./gradlew bootRun --args='--server.port=8089'
@@ -81,3 +90,51 @@ curl \
     --header "content-type: application/json" \
     --data-binary "@table.json" \
     https://rst-api-ote.icann.org/v1/table
+
+Current IP Address: 102.89.34.50
+
+
+telnet khml 80.
+GET / HTTP/1.1 HOST: web4 
+Aura api
+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
+
+
+import { OpenRouter } from '@openrouter/sdk';
+
+const openRouter = new OpenRouter({
+  apiKey: '<64a9dec7eb74658cc22265c172f53e345d43241f703f0ce3e1d721ae474a67bf>',
+  defaultHeaders: {
+    'HTTP-Referer': '<
+web4app.net
+>', // Optional. Site URL for rankings on 
+OpenRouter
+.
+    'X-Title': '<web4app>', // Optional. Site title for rankings on 
+OpenRouter
+.
+  },
+});
+
+const completion = await openRouter.chat.send({
+  model: 'web4/aura',
+  messages: [
+    {
+      role: 'user',
+      content: 'What is the meaning of life?',
+    },
+  ],
+  stream: false,
+});
+
+console.log(completion.choices[0].message.content);
+
+
+git config --global user.name 'web4'
+git config --global user.email 'Kubulee.kl@gmail.com'
+localuser@localhost/1.0.0.127.in-addr.arpa domain name pointer localhost.
+
+Whois-RWS
+
+
+https://datatracker.ietf.org/accounts/confirmnewemail/WyJrdWJ1bGVlLmtsQGdtYWlsLmNvbSIsIkt1YnVjb2luQHByb3Rvbi5tZSJd:1vHP34:fcqgT2JqX5OT5ixInj3kEmSHkaGSMrvhlRZVCvSsOiI/
