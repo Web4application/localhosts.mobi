@@ -1,0 +1,19 @@
+name: my-app-project # Optional project name
+
+services:
+  web:
+    build: .         # Builds from a local Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - db           # Ensures 'db' starts before 'web'
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: devpass
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:   web4        # Named volume for persistent data
